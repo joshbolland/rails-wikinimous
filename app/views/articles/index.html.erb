@@ -1,0 +1,9 @@
+<div class="container"><h1>Wikinimous</h1>
+<ul>
+<% @articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article)%><br></li>
+<% end %>
+</ul>
+<br>
+<span class="btn-black"><%= link_to "Write new article", new_article_path(@article) %></span>
+</div>
